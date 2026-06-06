@@ -173,9 +173,9 @@ export default function Home() {
             <Image
               src="/GenSentinel_Logo.png"
               alt="GenSentinel Logo"
-              width={48}
+              width={180}
               height={48}
-              className="rounded-lg shadow-sm"
+              className="object-contain"
               priority
             />
             <div className="hidden sm:flex items-center">
@@ -437,9 +437,9 @@ export default function Home() {
                 <Image
                   src="/GenSentinel_Logo.png"
                   alt="GenSentinel Logo"
-                  width={48}
-                  height={48}
-                  className="rounded-lg shadow-sm"
+                  width={160}
+                  height={44}
+                  className="object-contain"
                 />
               </div>
               <p className="text-sm max-w-md leading-relaxed text-slate-400">
