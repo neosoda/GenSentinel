@@ -1,0 +1,38 @@
+/**
+ * Curated list of 300 simple, readable English words for memorable passphrases.
+ */
+export const WORDLIST = [
+  "actor", "agent", "alert", "alpha", "amber", "anchor", "apple", "apron", "arrow", "aspect",
+  "atlas", "audio", "badge", "baker", "beach", "brick", "bridge", "cabin", "cable", "camel",
+  "canal", "cargo", "chain", "chair", "chalk", "charm", "chart", "chief", "cider", "circus",
+  "claim", "cliff", "climb", "cloud", "coach", "coast", "cobalt", "coral", "craft", "crane",
+  "cycle", "dairy", "delta", "depth", "diary", "drift", "eagle", "earth", "elbow", "ember",
+  "engine", "epoch", "equal", "error", "event", "extra", "fabric", "factor", "fairy", "faith",
+  "fiber", "field", "flame", "flight", "flute", "focus", "forest", "fossil", "frame", "frost",
+  "fruit", "giant", "glance", "globe", "glory", "grace", "grape", "graph", "grass", "grave",
+  "green", "grief", "group", "guard", "guest", "guide", "habit", "harbor", "haven", "heart",
+  "heavy", "helix", "honey", "honor", "horse", "hotel", "house", "human", "image", "index",
+  "input", "irony", "ivory", "jacket", "joint", "judge", "juice", "laser", "layer", "lemon",
+  "level", "light", "limit", "logic", "lunar", "macro", "magic", "magnet", "major", "maple",
+  "matrix", "melon", "mercy", "metal", "micro", "mimic", "miner", "model", "monarch", "moral",
+  "motor", "mount", "mouse", "music", "noble", "noise", "novel", "oasis", "ocean", "olive",
+  "onion", "onset", "orbit", "organ", "outer", "owner", "oxide", "paint", "paper", "patch",
+  "pathway", "pearl", "pedal", "phase", "pilot", "pinball", "pixel", "planet", "plasma", "plate",
+  "point", "polar", "pulse", "radar", "radio", "rainy", "rapid", "ratio", "razor", "rebel",
+  "reply", "reset", "river", "robot", "rocket", "royal", "ruler", "rust", "saddle", "safari",
+  "salad", "salmon", "scale", "scarf", "scent", "scope", "scout", "scrap", "screen", "sculpt",
+  "sense", "shadow", "shark", "shelf", "shell", "shift", "shore", "sight", "silver", "sketch",
+  "slice", "slide", "slope", "smoke", "snake", "solar", "sonic", "source", "space", "spark",
+  "sphere", "spice", "spider", "spiral", "splint", "spoon", "sport", "spray", "squad", "stage",
+  "stamp", "stand", "starlight", "steam", "steel", "steer", "stem", "stone", "storm", "strap",
+  "straw", "stream", "street", "stretch", "stripe", "studio", "sugar", "summit", "sunny", "sunset",
+  "super", "surf", "swan", "sweet", "swift", "sword", "symbol", "syntax", "syrup", "table",
+  "tiger", "token", "tonic", "topic", "torch", "tower", "trace", "track", "trail", "train",
+  "transit", "tread", "trend", "triad", "trial", "tribe", "tribute", "trick", "trio", "tripod",
+  "trust", "truth", "tulip", "tuna", "tune", "tunnel", "turbo", "turtle", "tutor", "twin",
+  "union", "unit", "unity", "update", "valley", "value", "vapor", "vector", "velvet", "vessel",
+  "vinyl", "violet", "viper", "virtue", "virus", "visit", "visor", "vista", "visual", "vital",
+  "vocal", "vodka", "voice", "volcano", "vortex", "vowel", "wagon", "walnut", "watch", "water",
+  "wave", "weary", "weave", "wheel", "whisky", "width", "windy", "winter", "wisdom", "witch",
+  "wizard", "wolf", "world", "worry", "wrist", "yacht", "yeast", "zebra", "zenith", "zero"
+];
