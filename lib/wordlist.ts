@@ -1,5 +1,5 @@
 /**
- * Curated list of 300 simple, readable English words for memorable passphrases.
+ * Curated list of 330 simple, readable English words for memorable passphrases.
  */
 export const WORDLIST = [
   "actor", "agent", "alert", "alpha", "amber", "anchor", "apple", "apron", "arrow", "aspect",

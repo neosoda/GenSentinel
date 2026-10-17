@@ -6,9 +6,9 @@
 
   # GenSentinel
 
-  **Générateur de clés et de secrets cryptographiques 100% côté client.**
+  **Générateur de clés et de secrets cryptographiques 100 % côté client.**
 
-  [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![Next.js](https://img.shields.io/badge/Next.js-16.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
@@ -16,35 +16,37 @@
 
 <br />
 
-> **GenSentinel** est une application web moderne qui permet aux développeurs de générer instantanément des mots de passe, des clés d'API, des UUIDs, des secrets JWT et plus encore, de façon sécurisée et sans aucun appel serveur (grâce à l'API Web Crypto native du navigateur).
+> **GenSentinel** est une application web moderne permettant aux développeurs de générer instantanément des mots de passe, des phrases secrètes, des clés d'API, des UUIDs, des secrets JWT et plus encore, de façon sécurisée et sans aucun appel serveur (grâce à l'API Web Crypto native du navigateur).
 
 ---
 
 ## ✨ Fonctionnalités Principales
 
-- 🛡️ **Sécurité Zéro-Trust** : 100% des clés sont générées via l'API locale `crypto.getRandomValues()`. Aucune clé n'est transmise sur le réseau.
-- 🚀 **Performances instantanées** : Architecture statique propulsée par Next.js, rendue en quelques millisecondes.
-- 🎨 **Multi-Thèmes Immersifs** : Alternez dynamiquement entre 4 environnements :
-  - **Moderne Clair** & **Sombre** (Épuré et minimaliste)
-  - **Terminal** (Brutalisme monospace avec un style ligne de commande rétro)
-  - **Cyberpunk** (Haut contraste, glitch art, formes géométriques et néons)
-- ⚙️ **Hautement Personnalisable** : Pour chaque générateur, ajustez la longueur, les symboles et la structure en temps réel.
-- 🚫 **Zéro Tracking** : Pas d'analytique, pas de cookies, pas d'inscription. Un respect absolu de la vie privée.
+- 🛡️ **Sécurité Zéro-Trust** : 100 % des clés sont générées via `crypto.getRandomValues()` avec échantillonnage par rejet sans biais de modulo et mélange de Fisher-Yates CSPRNG. Aucune clé n'est transmise sur le réseau.
+- 🚀 **Performances instantanées** : Architecture propulsée par Next.js 16 (App Router) et en-têtes HTTP de sécurité stricts (CSP, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`).
+- 🎨 **4 Thèmes de Travail** : Alternez dynamiquement entre 4 environnements persistés localement :
+  - **Clair** & **Sombre** (Épuré, contrastes calibrés Slate & Indigo)
+  - **Terminal** (Brutalisme monospace `JetBrains Mono` et accents vert phosphore)
+  - **Cyberpunk** (Haut contraste structuré avec titrage `Orbitron` et valeurs `JetBrains Mono`)
+- ⚙️ **Hautement Personnalisable** : Ajustez la longueur, les classes de caractères, les préfixes et les séparateurs en temps réel avec calcul exact d'entropie en bits.
+- 🚫 **Zéro Tracking** : Pas d'analytique, pas de cookies, pas d'inscription.
 
-## 🛠️ Générateurs Inclus
+## 🛠️ Les 10 Générateurs Inclus
 
-* 🔑 **Mots de passe** (Personnalisables, haute entropie)
-* 🆔 **UUID v4** (Identifiants uniques universels)
-* 🔐 **Secrets JWT** (Génération de sel HS256/RS256)
-* 🔌 **Clés d'API** (Formats base64, hexadécimal, alphanumérique)
-* 🔢 **Chaînes Hexadécimales** (WEP, WPA, etc.)
-* 📶 **Mots de passe Wi-Fi** (Robustes et prêts à l'emploi)
+* 🗣️ **Phrases secrètes mémorisables** (2 à 10 mots, séparateur personnalisable)
+* 🔑 **Mot de passe robuste** (Garantie systématique de chaque classe de caractères sélectionnée + mélange CSPRNG)
+* 🔤 **Jeton alphanumérique** (Lettres et chiffres sans conflit de symboles)
+* 🆔 **UUID v4** (Identifiants uniques universels RFC 4122, 122 bits d'entropie)
+* 🔌 **Clés d'API** (Préfixe personnalisable ex. `sk_live_` + segment aléatoire)
+* 🔢 **Clé Hexadécimale** (8 à 128 octets pour clés AES/HMAC)
+* 🔐 **Secret JWT** (16 à 128 octets encodés en Base64 standard)
+* 🐍 **Clé secrète Django** (Alphabet compatible `settings.py`)
+* 🍃 **ObjectId MongoDB** (12 octets : horodatage 4 octets + 64 bits d'aléa cryptographique)
+* 📶 **Mot de passe WiFi / WPA** (Symboles compatibles routeurs, 8 à 63 caractères)
 
 ---
 
-## 🚀 Installation & Démarrage
-
-GenSentinel est pensé pour tourner n'importe où, ou même localement sur votre machine de développement.
+## 🚀 Installation, Démarrage & Vérifications
 
 ```bash
 # 1. Cloner le dépôt
@@ -56,30 +58,24 @@ npm install
 
 # 3. Lancer le serveur de développement
 npm run dev
+
+# 4. Exécuter les contrôles de qualité
+npm test
+npm run typecheck
+npm run lint
+npm run build
 ```
 
-Ouvrez ensuite [http://localhost:3000](http://localhost:3000) avec votre navigateur pour voir le résultat.
+Ouvrez ensuite [http://localhost:3000](http://localhost:3000) avec votre navigateur.
 
 ## 🏗️ Stack Technique
 
-* **Framework** : [Next.js 15](https://nextjs.org/) (App Router, mode statique par défaut)
-* **Langage** : [TypeScript](https://www.typescriptlang.org/) (Typage strict pour garantir l'intégrité des algorithmes de génération)
-* **Design** : [Tailwind CSS v4](https://tailwindcss.com/) (Intégration via `@theme inline` et variables CSS)
-* **Polices** : *Orbitron*, *JetBrains Mono*, *Geist*, implémentées via `next/font/google`.
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! Que ce soit pour ajouter un nouveau générateur, optimiser une animation ou proposer un nouveau thème :
-1. Forkez le projet
-2. Créez votre branche (`git checkout -b feature/nouveau-generateur`)
-3. Commitez vos changements (`git commit -m 'Ajout du générateur Base64'`)
-4. Poussez la branche (`git push origin feature/nouveau-generateur`)
-5. Ouvrez une Pull Request
+* **Framework** : [Next.js 16](https://nextjs.org/) (App Router, React 19)
+* **Langage** : [TypeScript](https://www.typescriptlang.org/) (`strict: true`)
+* **Design** : [Tailwind CSS v4](https://tailwindcss.com/) (`@theme inline` et tokens `data-theme`)
+* **Polices** : *Geist*, *Geist Mono*, *JetBrains Mono*, *Orbitron* via `next/font/google`.
+* **Tests** : Runner natif Node.js (`node --test`).
 
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
-
-<div align="center">
-  <sub>Fait avec ❤️ pour la communauté des développeurs.</sub>
-</div>

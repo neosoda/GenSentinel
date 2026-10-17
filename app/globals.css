@@ -2,15 +2,37 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: #f8fafc; /* slate-50 */
-  --foreground: #0f172a; /* slate-900 */
+:root,
+html[data-theme="light"] {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --font-body: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-code: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Support class-based dark mode */
-.dark {
-  --background: #020617; /* slate-950 */
-  --foreground: #f8fafc; /* slate-50 */
+html[data-theme="dark"] {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --font-body: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-code: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+html[data-theme="terminal"] {
+  --background: #050a06;
+  --foreground: #d1fae5;
+  --font-body: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-heading: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-code: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+html[data-theme="cyberpunk"] {
+  --background: #080412;
+  --foreground: #f5f3ff;
+  --font-body: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-orbitron), var(--font-geist-sans), sans-serif;
+  --font-code: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
 @theme inline {
@@ -21,7 +43,122 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+code,
+kbd,
+pre,
+.font-mono {
+  font-family: var(--font-code);
+}
+
+/* Thème Terminal : Brutalisme monospace sobre, contrastes WCAG AA */
+html[data-theme="terminal"] .theme-page {
+  background-color: #050a06;
+  color: #d1fae5;
+}
+
+html[data-theme="terminal"] .theme-header,
+html[data-theme="terminal"] .theme-section,
+html[data-theme="terminal"] .theme-card {
+  background-color: #09130c;
+  border-color: #14532d;
+}
+
+html[data-theme="terminal"] .theme-card {
+  border-radius: 0.25rem;
+}
+
+html[data-theme="terminal"] .theme-card-panel {
+  background-color: #060e08;
+  border-color: #14532d;
+}
+
+html[data-theme="terminal"] .theme-value-btn {
+  background-color: #050a06;
+  border-color: #166534;
+  color: #86efac;
+  border-radius: 0.25rem;
+}
+
+html[data-theme="terminal"] .theme-value-btn:hover {
+  background-color: #0c1f12;
+  border-color: #22c55e;
+}
+
+html[data-theme="terminal"] .theme-primary-btn {
+  background-color: #15803d;
+  color: #f0fdf4;
+  border-radius: 0.25rem;
+}
+
+html[data-theme="terminal"] .theme-primary-btn:hover {
+  background-color: #16a34a;
+}
+
+html[data-theme="terminal"] .theme-badge {
+  background-color: #052e16;
+  border-color: #166534;
+  color: #4ade80;
+  border-radius: 0.25rem;
+}
+
+/* Thème Cyberpunk : Haut contraste structuré (Orbitron + Cyan/Magenta/Jaune sobre) */
+html[data-theme="cyberpunk"] h1,
+html[data-theme="cyberpunk"] h2,
+html[data-theme="cyberpunk"] h3 {
+  letter-spacing: 0.03em;
+}
+
+html[data-theme="cyberpunk"] .theme-page {
+  background-color: #080412;
+  color: #f5f3ff;
+}
+
+html[data-theme="cyberpunk"] .theme-header,
+html[data-theme="cyberpunk"] .theme-section,
+html[data-theme="cyberpunk"] .theme-card {
+  background-color: #110924;
+  border-color: #0e7490;
+}
+
+html[data-theme="cyberpunk"] .theme-card-panel {
+  background-color: #0c061a;
+  border-color: #155e75;
+}
+
+html[data-theme="cyberpunk"] .theme-value-btn {
+  background-color: #090414;
+  border-color: #164e63;
+  color: #67e8f9;
+}
+
+html[data-theme="cyberpunk"] .theme-value-btn:hover {
+  background-color: #160c2e;
+  border-color: #ec4899;
+  color: #f9a8d4;
+}
+
+html[data-theme="cyberpunk"] .theme-primary-btn {
+  background-color: #0891b2;
+  color: #ecfeff;
+}
+
+html[data-theme="cyberpunk"] .theme-primary-btn:hover {
+  background-color: #06b6d4;
+}
+
+html[data-theme="cyberpunk"] .theme-badge {
+  background-color: #422006;
+  border-color: #ca8a04;
+  color: #fde047;
 }

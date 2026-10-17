@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,18 +12,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "GenSentinel - Secure Cryptographic Key & Password Generator",
+  title: "GenSentinel - Générateur de clés et secrets cryptographiques côté client",
   description:
-    "Generate cryptographically secure passwords, API keys, tokens, and technical secrets locally in your browser. 100% client-side generation using Web Crypto API. No tracking, no signup.",
+    "Générez des mots de passe, clés d'API, UUID, secrets JWT et jetons cryptographiques localement dans votre navigateur. 100 % côté client via Web Crypto API. Zéro tracking, sans inscription.",
   keywords: [
-    "password generator",
-    "secure keys",
-    "API key generator",
-    "UUID generator",
-    "JWT secret",
-    "random hex",
-    "cryptography",
+    "générateur de mot de passe",
+    "clés sécurisées",
+    "clé API",
+    "UUID v4",
+    "secret JWT",
+    "hexadécimal",
+    "cryptographie",
     "Web Crypto API",
   ],
   authors: [{ name: "GenSentinel" }],
@@ -35,8 +45,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-200">
+    <html
+      lang="fr"
+      data-theme="light"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${orbitron.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-150">
         {children}
       </body>
     </html>
