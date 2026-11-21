@@ -14,7 +14,7 @@
 
 Un atelier de génération de secrets conçu pour les développeurs, les administrateurs et tous ceux qui préfèrent garder leurs clés pour eux.
 
-[Découvrir les générateurs](#-les-10-générateurs) · [Installer](#-démarrage-rapide) · [Comprendre la sécurité](#-sécurité--confidentialité) · [Contribuer](#-contribuer)
+[**🔐 Ouvrir GenSentinel**](https://gen.techsentinel.fr/) · [Découvrir les générateurs](#-les-10-générateurs) · [Installer](#-démarrage-rapide) · [Comprendre la sécurité](#-sécurité--confidentialité) · [Contribuer](#-contribuer)
 
 </div>
 
@@ -116,6 +116,14 @@ flowchart LR
 
 > [!IMPORTANT]
 > **Un générateur n'est pas un coffre-fort.** Les valeurs copiées passent par le presse-papiers de votre appareil. Pour des secrets sensibles, privilégiez une instance que vous contrôlez et une connexion HTTPS. Les estimations d'entropie affichées sont indicatives : les phrases mémorisables utilisent actuellement une liste de **330 mots** et les phrases courtes ne conviennent pas aux secrets critiques.
+
+## Questions fréquentes
+
+**Comment générer un mot de passe fort en ligne sans envoyer sa valeur à un serveur ?** GenSentinel utilise l'API `Web Crypto` du navigateur pour produire les valeurs localement. Pour un usage sensible, privilégiez une connexion HTTPS et un navigateur à jour.
+
+**Peut-on créer des clés API, des UUID v4 et des secrets JWT ?** Oui, ces formats figurent parmi les dix générateurs disponibles.
+
+**Faut-il créer un compte ?** Non. [L'interface en ligne](https://gen.techsentinel.fr/) fonctionne sans compte utilisateur ; vous pouvez aussi héberger l'application vous-même.
 
 ## 🧱 Sous le capot
 
